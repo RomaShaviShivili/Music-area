@@ -1,0 +1,327 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+   body{
+       background-color: #000;
+   }
+.header{
+    height: 400px;
+    width: 100%;
+    animation: backgroundanimation 20s linear infinite;
+}
+
+@keyframes  backgroundanimation  {
+    0%{
+       background-image:url(premium_photo-1661853413809-6be6bed796d9.avif) ;
+       background-position: center;
+       background-size: cover;
+    }
+    50%{
+      background-image:url(photo-1483000805330-4eaf0a0d82da.avif) ;
+      background-position: center;
+      background-size: cover;
+   }
+
+   70%{
+      background-image: url(premium_photo-1681263751809-d54a76237627.avif);
+      background-position: center;
+      background-size: cover;
+   }
+
+   100%{
+      background-image:url(photo-1528109966604-5a6a4a964e8d.avif) ;
+      background-position: center;
+      background-size: cover;
+   }
+}
+.menu{
+    background-color: rgb(248, 3, 32);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content:space-between;
+}
+
+.menu ul{
+    gap: 20px;
+    display: flex;
+    list-style: none;  
+    margin-right: 100px;
+}
+
+.menu a{
+    color: #fff;
+ 
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.menu a:after{
+    content: '';
+
+    position: absolute;
+    background: #fff;
+    height: 5px;
+    width: 0%;
+    left: 0;
+    bottom: -6px;
+}
+
+.menu a:hover:after{
+    transition: 0.9s;
+    width: 100%;
+}
+  .logo img{
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .main{
+    background-color: #fffb07ed;
+    height: 100%;
+  }
+
+
+  .clients-logo{  
+   border: 2px solid #fff;
+   border-radius: 5px;
+   height: 200px;
+   background-color: #747474;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+  }
+   #clients h2{
+       text-align: center;
+       font-size: 50px;
+       color: #fff;
+       background-color: #000;
+   }
+    .clients-logo img{
+      width: 200px;
+      height: 100px;
+      mix-blend-mode: multiply;
+    }
+    #service{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         gap: 50px;
+         width: 100%;
+    }
+     .lesson {
+      background-color: #7d7d7ced;
+      width: 380px;
+      border-radius: 10px;
+      cursor: pointer;
+     }
+     .lesson img{
+       width: 380px;
+       height: 250px;
+       border-radius: 10px;
+     }
+     .about button{
+       background-color: #000;
+       padding: 10px;
+       color: #fff;
+       border-radius: 10px;
+       border: none;
+       box-shadow: 10px solid rgb(180, 22, 22) ;
+        display: flex;
+        cursor: pointer;
+        justify-content:center;
+       font-size: 20px;
+     }
+     .about button:hover{
+       transition: 0.9s;
+       background-color: #1bac13;
+     }
+
+
+     .footer{
+       background-color: #2b2a2a;
+       height: 300px;
+       margin-top: 40px;
+       padding: 10px;
+     }
+
+      .footer-menu{
+
+          justify-content: center;
+      }
+      .footer-menu h2{
+          color: #fff;
+
+      }
+     .footer-menu ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 50px;
+     }
+     .footer-logo img{
+      cursor: pointer;
+     }
+     .footer-menu a{
+       color: #fff;
+       text-decoration: none;
+     }
+     .footer-menu a:hover{
+       color: #c45;
+       transition: 0.9s;
+     }
+
+
+      @media (max-width:768px){
+           .header{
+             width: 100%;
+           }
+         .menu{
+             position: fixed;
+             z-index: 1;
+             width: 100%;
+             flex-direction: row;
+         }
+         .menu li{
+             background-color: rgb(0, 0, 0);
+             padding: 10px;
+             border-radius: 10px;
+            
+         }
+         .menu a{
+            color: rgb(253, 0, 0); 
+         }
+         .menu a:after{
+            content: '';
+            background-color: #000;
+         }
+         #clients{
+            width: 100%;
+            height: 300px; 
+            display: block;  
+            flex-wrap: wrap ;
+            justify-content: center;
+         }
+         .clients-logo {
+           width: 100%;
+      
+          
+         }
+      }
+
+      @media (max-width:450px){
+         .header{
+            width: 100%;
+            height: 600px;
+          }
+        .menu{
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 180px;
+            
+        }
+        .logo{
+          position: relative;
+          bottom: 25px;
+          width: 200px;
+        }
+         .menu ul{
+            position: relative;
+            top: 50px;
+            right: 190px;
+         }
+        .menu li{
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 10px;
+           
+        }
+         .main{
+            width: 100%;
+         }
+        .menu a{
+           color: rgb(253, 0, 0); 
+        }
+        .menu a:after{
+           content: '';
+           background-color: #000;
+        }
+        #clients{
+           width: 100%;
+           height: 300px; 
+           display: block;  
+           flex-wrap: wrap ;
+           justify-content: center;
+        }
+        .clients-logo {
+          width: 100%;
+      
+         
+        }
+        .footer{
+         width: 100%;
+        }
+      }
+  @media (max-width:390px){
+   .header{
+      width: 110%;
+      height: 600px;
+    }
+  .menu{
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+      height: 180px;
+      
+  }
+  .logo{
+    position: relative;
+    bottom: 25px;
+    width: 200px;
+  }
+   .menu ul{
+      position: relative;
+      top: 50px;
+      right: 190px;
+   }
+  .menu li{
+      background-color: rgb(0, 0, 0);
+      padding: 10px;
+      border-radius: 10px;
+     
+  }
+   .main{
+      width: 110%;
+   }
+  .menu a{
+     color: rgb(253, 0, 0); 
+  }
+  .menu a:after{
+     content: '';
+     background-color: #000;
+  }
+  #clients{
+     width: 100%;
+     height: 300px; 
+     display: block;  
+     flex-wrap: wrap ;
+     justify-content: center;
+  }
+  .clients-logo {
+    width: 100%;
+
+   
+  }
+  .footer{
+   width: 110%;
+  }
+  }
